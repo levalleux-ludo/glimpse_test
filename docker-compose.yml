@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  adsManager:
+    build: .
+    container_name: 'adsManager'
+    ports:
+      - '8888:8888'
+    restart: always
+    image: levalleuxludo/my_repo:adsManager
+    env_file: .env
+
+
