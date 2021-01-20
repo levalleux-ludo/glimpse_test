@@ -1,3 +1,20 @@
-import { config } from './config';
+import { ApiServer } from './server';
+import { getMessage } from './message';
+import { TestController } from './testController';
+import { RootController } from './rootController';
 
-console.log(`Hello from ${config().APP_ID}`);
+const main = async () => {
+
+    console.log(getMessage());
+
+    const rootController = new RootController();
+    const testController = new TestController();
+
+    const server = new ApiServer([rootController, testController]);
+    server.start();
+}
+
+main().catch(e => {
+    console.error(e);
+});
+  
