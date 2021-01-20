@@ -1,13 +1,30 @@
 version: '3'
 services:
 
-  adsManager:
+  adsManager1:
     build: .
-    container_name: 'adsManager'
+    container_name: 'adsManager1'
     ports:
-      - '8888:8888'
+      - '8891:8888'
     restart: always
     image: levalleuxludo/my_repo:adsManager
-    env_file: .env
+    env_file: .env1
+
+  adsManager2:
+    build: .
+    container_name: 'adsManager2'
+    ports:
+      - '8892:8888'
+    restart: always
+    image: levalleuxludo/my_repo:adsManager
+    env_file: .env2
+
+  nginx:
+    build: ./nginx
+    ports:
+    - "8888:80"
+    depends_on:
+    - adsManager1
+    - adsManager2
 
 

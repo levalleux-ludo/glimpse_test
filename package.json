@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "postinstall": "node scripts/post_install.js",
         "build": "tsc",
         "watch": "npm run build && nodemon",
         "start": "npm run build && npx node -r ts-node/register ./src/index.ts --unhandled-rejections=strict",

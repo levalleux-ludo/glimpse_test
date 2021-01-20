@@ -13,6 +13,7 @@ USER adsManager
 RUN mkdir -p /home/adsManager/api
 WORKDIR /home/adsManager/api
 COPY --chown=adsManager package.json .
+COPY --chown=adsManager scripts scripts
 COPY --chown=adsManager .env.example .
 RUN ls -la
 RUN npm install -y
