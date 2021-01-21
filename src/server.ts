@@ -1,4 +1,4 @@
-import { IController } from './icontroller';
+import { IController } from './api.controllers/icontroller';
 import * as bodyParser from 'body-parser';
 import cors from 'cors';
 import express from 'express';
@@ -42,7 +42,7 @@ export class ApiServer {
     public get app() {
         return this._app;
     }
-    
+
     public start(port?: number) {
         if (!port) {
             port = +API_PORT;

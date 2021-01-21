@@ -1,11 +1,11 @@
-import { getMessage } from './message';
+import { getMessage } from '../message';
 import express, { query } from 'express';
 
 export class RootController {
     private _router = express.Router();
 
     constructor() {
-        this._router.get('/', this.get);
+        this._router.get('/', this.get_);
     }
 
     public get path() {
@@ -16,7 +16,7 @@ export class RootController {
         return this._router;
     }
 
-    private get = (req: express.Request, res: express.Response) => {
+    private get_ = (req: express.Request, res: express.Response) => {
         res.send(getMessage());
     }
 }

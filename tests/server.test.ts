@@ -1,5 +1,5 @@
-import { RootController } from './../src/rootController';
-import { TestController } from './../src/testController';
+import { RootController } from '../src/api.controllers/rootController';
+import { TestController } from '../src/api.controllers/testController';
 import { ApiServer } from './../src/server';
 import chai from 'chai';
 import chaiHttp from 'chai-http';

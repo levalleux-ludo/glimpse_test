@@ -1,7 +1,7 @@
 import { config as dotenvConfig } from 'dotenv';
 import { resolve } from 'path';
 const res = dotenvConfig({
-    debug: true,
+    debug: false,
     path: resolve(__dirname, './../.env'),
 });
 if (res.error) {

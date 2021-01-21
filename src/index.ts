@@ -1,7 +1,7 @@
 import { ApiServer } from './server';
 import { getMessage } from './message';
-import { TestController } from './testController';
-import { RootController } from './rootController';
+import { TestController } from './api.controllers/testController';
+import { RootController } from './api.controllers/rootController';
 
 const main = async () => {
 
